@@ -1,6 +1,6 @@
 {
   "name": "postcss-bom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add a UTF-8 BOM to files",
   "keywords": [
     "postcss",
