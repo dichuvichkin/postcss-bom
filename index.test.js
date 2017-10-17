@@ -30,6 +30,6 @@ const str = `
 const buffer = new Buffer(str);
 const withBOM = Buffer.concat([BOM, buffer]).toString();
 
-it('does something', () => {
+it('adds BOM', () => {
     return run(str, withBOM, {});
 });
