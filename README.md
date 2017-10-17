@@ -16,6 +16,12 @@ Postcss port of [gulp-bom](https://github.com/sindresorhus/gulp-bom)
 
 **Don't use this unless you really need to.**
 
+## Install
+
+```js
+npm install --save-dev postcss-bom
+```
+
 ## Usage
 
 ```js
