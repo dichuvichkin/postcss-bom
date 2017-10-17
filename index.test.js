@@ -33,3 +33,12 @@ const withBOM = Buffer.concat([BOM, buffer]).toString();
 it('adds BOM', () => {
     return run(str, withBOM, {});
 });
+
+it('check file is empty', () => {
+    return postcss([plugin()])
+        .process('')
+        .then(result => {
+            expect(result.warnings()[0].text).toEqual('File has no nodes');
+            expect(result.warnings().length).toBe(1);
+        });
+});
