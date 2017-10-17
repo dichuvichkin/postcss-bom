@@ -1,51 +1,25 @@
-# PostCSS Plugin Boilerplate
+# postcss-bom [![Build Status][ci-img]][ci]
 
-<img align="right" width="135" height="95"
-     title="Philosopher’s stone, logo of PostCSS"
-     src="http://postcss.github.io/postcss/logo-leftp.svg">
+[PostCSS] Add a UTF-8 BOM to files.
 
-Сreate new PostCSS plugins in a few steps:
+[PostCSS]: https://github.com/postcss/postcss
+[ci-img]:  https://travis-ci.org/dichuvichkin/postcss-bom.svg
+[ci]:      https://travis-ci.org/dichuvichkin/postcss-bom
 
-1. Clone this repository:
+> Add a [UTF-8 BOM](http://en.wikipedia.org/wiki/Byte_order_mark#UTF-8) to files
 
-```sh
-git clone https://github.com/postcss/postcss-plugin-boilerplate.git
+From Wikipedia:
+
+> The Unicode Standard permits the BOM in UTF-8, but does not require nor recommend its use. Byte order has no meaning in UTF-8.
+
+Postcss port of [gulp-bom](https://github.com/sindresorhus/gulp-bom)
+
+**Don't use this unless you really need to.**
+
+## Usage
+
+```js
+postcss([ require('postcss-bom') ])
 ```
 
-2. Execute the wizard script. It will ask you a few questions
-   and fill all files with your data.
-
-```sh
-node ./postcss-plugin-boilerplate/start
-```
-
-Call it with `--yarn` argument, if you prefer [yarn](https://yarnpkg.com/)
-package manager:
-
-```sh
-node ./postcss-plugin-boilerplate/start --yarn
-```
-
-Or use `--no-install` if you want to skip dependencies installation.
-
-3. Your plugin repository will now have a clean Git history.
-[Create the GitHub repository](https://github.com/new)
-and push your project there.
-
-4. Add your project to [Travis CI](https://travis-ci.org).
-
-5. Write some code to `index.js` and tests to `test.js`.
-
-6. Execute `npm test` command
-
-7. Add input and output CSS examples to `README.md`.
-
-8. Add options descriptions if your plugin has them.
-
-9. Fill `CHANGELOG.md` with initial version and release it to npm.
-
-10. Fork [PostCSS](https://github.com/postcss/postcss), add your plugin to the
-[Plugins list](https://github.com/postcss/postcss/blob/master/docs/plugins.md)
-and send a pull request.
-
-11. Follow [@PostCSS](https://twitter.com/postcss) to get the latest updates.
+See [PostCSS] docs for examples for your environment.

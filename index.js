@@ -1,13 +1,9 @@
-var postcss = require('postcss');
+const postcss = require('postcss');
+const BOM = new Buffer('\uFEFF');
 
-module.exports = postcss.plugin('PLUGIN_NAME', function (opts) {
-    opts = opts || {};
-
-    // Work with options here
-
-    return function (root, result) {
-
-        // Transform CSS AST here
-
-    };
+module.exports = postcss.plugin('postcss-bom', () => css => {
+    const firstNodeBefore = css.nodes[0].raws.before;
+    const buffer = new Buffer(firstNodeBefore);
+    const stringWithBOM = Buffer.concat([BOM, buffer]).toString();
+    css.nodes[0].raws.before = stringWithBOM;
 });

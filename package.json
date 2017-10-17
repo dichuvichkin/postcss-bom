@@ -1,19 +1,27 @@
 {
-  "name": "PLUGIN_NAME",
-  "version": "0.0.0",
-  "description": "PostCSS plugin PLUGIN_DESC",
+  "name": "postcss-bom",
+  "version": "0.0.1",
+  "description": "Add a UTF-8 BOM to files",
   "keywords": [
     "postcss",
     "css",
-    "postcss-plugin"KEYWORDS
+    "postcss-plugin",
+    "bom",
+    "byte",
+    "order",
+    "mark",
+    "utf8",
+    "utf-8",
+    "add",
+    "prepend"
   ],
-  "author": "AUTHOR_NAME <AUTHOR_EMAIL>",
+  "author": "Dmitriy Chuvichkin <dichuvichkin@gmail.com>",
   "license": "MIT",
-  "repository": "GITHUB_NAME/PLUGIN_NAME",
+  "repository": "dichuvichkin/postcss-bom",
   "bugs": {
-    "url": "https://github.com/GITHUB_NAME/PLUGIN_NAME/issues"
+    "url": "https://github.com/dichuvichkin/postcss-bom/issues"
   },
-  "homepage": "https://github.com/GITHUB_NAME/PLUGIN_NAME",
+  "homepage": "https://github.com/dichuvichkin/postcss-bom",
   "dependencies": {
     "postcss": "^6.0.1"
   },
