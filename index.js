@@ -2,7 +2,7 @@ const postcss = require('postcss');
 const BOM = new Buffer('\uFEFF');
 
 module.exports = postcss.plugin('postcss-bom', () => (css, result) => {
-    if (!css.nodes[0]) {
+    if (!css.nodes.length) {
         result.warn('File has no nodes');
         return;
     }
